@@ -1,8 +1,7 @@
 UIColor-HexString
 =================
 
-UIColor+HexString
-Create UIColor instance with HEX string
+UIColor-HexString create UIColor instance with HEX string.
 
 
 ## How To Use
@@ -24,11 +23,11 @@ HEX String paramater can be 3, 4, 6, 8 letters. Also "0x" and "#" prefix are acc
 
 e.g. 
 ```
-#abcf
-ABC
-aAbBcC
-AABBCC30
-0xaabbcc
+@"#abcf"
+@"ABC"
+@"aAbBcC"
+@"AABBCC30"
+@"0xaabbcc"
 ```
 
 
