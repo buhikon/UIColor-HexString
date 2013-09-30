@@ -21,13 +21,15 @@ UIColor *color = [UIColor colorWithHexString:@"AABBCCFF"];
 
 HEX String paramater can be 3, 4, 6, 8 letters. Also "0x" and "#" prefix are acceptable.
 
+
 e.g. 
+```
 #abcf
 ABC
 aAbBcC
 AABBCC30
 0xaabbcc
-
+```
 
 
 
