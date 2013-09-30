@@ -1,7 +1,7 @@
 UIColor-HexString
 =================
 
-UIColor-HexString create UIColor instance with HEX string.
+UIColor-HexString creates UIColor instance with HEX string.
 
 
 ## How To Use
