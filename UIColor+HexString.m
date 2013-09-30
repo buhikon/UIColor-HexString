@@ -1,8 +1,9 @@
 //
-//  UIColor+UIColor_HexString.m
+//  UIColor+HexString.m
+//  https://github.com/buhikon/UIColor-HexString
 //
-//  Created by Joey Lee on 13. 9. 30.
-//  Copyright (c) 2013 Joey Lee. All rights reserved.
+//  Created by Buhikon on 2013. 9. 30.
+//  Copyright 2013 Buhikon. All rights reserved.
 //
 
 #import "UIColor+HexString.h"
@@ -10,6 +11,14 @@
 @implementation UIColor (UIColor_HexString)
 
 // convert HexString to UIColor
+//
+// e.g.
+//    @"#abcf"        // R:a,  G:b,  B:c,  A:f
+//    @"ABC"          // R:a,  G:b,  B:c,  A:f
+//    @"aAbBcC"       // R:aa, G:bb, B:cc, A:ff
+//    @"AABBCC30"     // R:aa, G:bb, B:xx, A:30
+//    @"0xaabbcc"     // R:aa, G:bb, B:cc, A:ff
+
 + (UIColor *)colorWithHexString:(NSString *)hexString
 {
     UIColor *result = nil;
@@ -20,6 +29,7 @@
         int unitSize = 0;
         BOOL alphaExist = NO;
         
+        hexString = [hexString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
         NSString *first1Str = [hexString substringToIndex:1];
         if([first1Str isEqualToString:@"#"]) {
